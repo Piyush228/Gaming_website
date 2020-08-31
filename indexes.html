@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <link rel="icon" href="https://i.pinimg.com/originals/93/f2/55/93f25529b5d8b253dad84591992c454f.jpg" type="image/png">
+    <title>Pheonix Game</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-left"> Pheonix Game</div>
+      <div class="header-right">
+        <a href="#" class="login">More Game</a>
+      </div>
+    </div>
+  </header>  
+
+<div class="container">
+ <h1> Dice Game 🎲 </h1>
+
+ <div class="dice">
+  <p>You</p>
+  <img src="dice1.png" id="check1">
+ </div>
+ <div class="dice">
+  <p>Computer</p>
+  <img src="dice6.png" id="check2">
+ </div>
+
+ <div>
+  <button onclick="ludogame()"> Click Me</button>
+ </div>
+</div>
+
+
+<script>
+
+ ludogame = () => { 
+ const play1 = Math.floor(Math.random() * 6) + 1; 
+ const play1dice = `dice${play1}.png`;
+ document.getElementById('check1').setAttribute('src', play1dice);
+
+ const play2 = Math.floor(Math.random() * 6) + 1; 
+ const play2dice = `dice${play2}.png`;
+ document.getElementById('check2').setAttribute('src', play2dice);
+
+ if(play1 > play2) 
+  { document.querySelector('h1').innerHTML="You won ✌️😄";
+ } else if(play1 < play2) {
+   document.querySelector('h1').innerHTML="You lose 😬😢😭";
+ } else{ document.querySelector('h1').innerHTML="DRAW 😎"; }
+}
+
+</script>
+</body>
+</html>

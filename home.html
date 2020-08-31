@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://i.pinimg.com/originals/93/f2/55/93f25529b5d8b253dad84591992c454f.jpg" type="image/png">
+    <title>Pheonix Game</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="header-left"> Pheonix Game</div>
+          <div class="header-right">
+            <a href="#" class="login">More Game</a>
+          </div>
+        </div>       
+
+            <div class="main">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="sliderText">
+                                    <img src="snake.PNG" alt="game">
+                                </div>
+                                <div class="content">
+                                   <a href="#">Play</a>
+                                   <h3> Snake Game 🐍</h3>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="sliderText">
+                                    <img src="memory.PNG" alt="game">
+                                </div>
+                                <div class="content">
+                                    <a class="bigs" href="gamev.html">Play</a>
+                                    <h3 >Memory Game 💡</h3>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="sliderText">
+                                    <img src="rock.PNG" alt="game">
+                                </div>
+                                <div class="content">
+                                    <a class="big" href="#">Play</a>
+                                    <h3>ROCK PAPER SCISSOR</h3>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="sliderText">
+                                    <img src="typing.PNG" alt="game">
+                                </div>
+                                <div class="content">
+                                    <a href="typing.html">Play</a>
+                                    <h3>Typing Game 💻</h3>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="sliderText">
+                                    <img src="ludo.PNG" alt="game">
+                                </div>
+                                <div class="content">
+                                    <a href="indexes.html">Play</a>
+                                    <h3>Dice Game 🎲 🎲</h3>
+                                </div>
+                            </div>
+                        </div>   
+                    </div> 
+                </div> 
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+            <script>
+                let sliderSelector = '.swiper-container',
+                    options = {
+                    loop: true,
+                    speed:800,
+                    slidesPerView: 3, // or 'auto'
+                    spaceBetween: 0,
+                    centeredSlides : true,
+                    effect: 'coverflow', // 'cube', 'fade', 'coverflow',
+                    coverflowEffect: {
+                        rotate: 30, // Slide rotate in degrees
+                        stretch: 0, // Stretch space between slides (in px)
+                        depth: 200, // Depth offset in px (slides translate in Z axis)
+                        modifier: 1, // Effect multipler
+                        slideShadows : true // Enables slides shadows
+                    },
+                    grabCursor: true,
+                    parallax: true,
+                    on: {
+                        imagesReady: function(){
+                        this.el.classList.remove('loading');
+                        }
+                    }
+                    };
+                let mySwiper = new Swiper(sliderSelector, options);
+                mySwiper.init();
+            </script>
+        </div>
+    </header>
+</body>
+</html>
